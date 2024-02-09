@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ehl5wjc.css">
+
+    <!-- GLITCH SOUND LOADING -->
+
+    <audio id="glitchSound" src="sfx/glitchSfx.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" src="sfx/happyAmbient.mp3" loop preload="auto"></audio>
+    <audio id="backgroundMusic-dark" src="sfx/darkAmbient.mp3" loop preload="auto"></audio>
+    <audio id="typewriterSound" src="sfx/neutralSfx.mp3" preload="auto"></audio>
+    <audio id="typewriterSoundD23" src="sfx/happySfx1.mp3" preload="auto"></audio>
+    <audio id="typewriterSoundD4" src="sfx/evilSfx1.mp3" preload="auto"></audio>
+    <audio id="typewriterSoundD0" src="sfx/d0Sfx.mp3" preload="auto"></audio>
+    <audio id="restart" src="sfx/restartSfx.wav" preload="auto"></audio>
+
+    <!-- END -->
+
+    <title>Stadsvergroener</title>
+</head>
+
+<body>
+    <div id="resolutionWarning" style="display: none;">
+        <img src="/assets/popUp/knoep.svg" alt="Knopje">
+       
+    </div>
+
+    <!-- INFO OVER GREEN DEAL  ----------------------------------------------------------------------------------------------------     -->
+    <div id="scene200" class="scene active">
+        <h2 class="sceneName">Scene 200</h2>
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <button class="start-btn" onclick="changeScene(32)">
+                    <h2>- Start -</h2>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene32" class="scene">
+        <h2 class="sceneName">Scene 32</h2>
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <p class="typewriter">
+                    In de jaren 90 luidden milieuorganisaties de alarmbel over klimaatverandering en riepen
+                    ze op tot dringende actie...
+                </p>
+                <button class="nextBtn" onclick="changeScene(33)">
+                    <p>Klik om verder te gaan!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene33" class="scene">
+        <h2 class="sceneName">Scene 33</h2>
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <p class="typewriter">
+                    Hun boodschap was helder: we moeten afscheid nemen van fossiele brandstoffen en
+                    overstappen naar <strong>duurzame
+                        energiebronnen</strong> om de ernstige gevolgen van de opwarming van de aarde aan te pakken...
+                </p>
+                <button class="nextBtn" onclick="changeScene(34)">
+                    <p>Klik om verder te gaan!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene34" class="scene">
+        <h2 class="sceneName">Scene 34</h2>
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <p class="typewriter">
+                    Deze rapporten vormden een belangrijke
+                    aanzet tot bewustwording om serieus werk te maken van een <strong>groenere en duurzamere
+                        toekomst...</strong>
+                </p>
+                <button class="nextBtn" onclick="changeScene(35)">
+                    <p>Klik om verder te gaan!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene35" class="scene">
+        <h2 class="sceneName">Scene 35</h2>
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <p class="typewriter">
+                    Helaas wordt er zelfs vandaag de dag nog te
+                    weinig geluisterd naar deze oproep tot actie. Daarom hebben we <strong>vergroeners</strong> nodig!
+                </p>
+                <button class="nextBtn" onclick="changeScene(1)">
+                    <p>Klik om verder te gaan!</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- END  ----------------------------------------------------------------------------------------------------     -->
+
+
+    <!-- START SOCICITATIE ----------------------------------------------------------------------------------------------------     -->
+    <div id="scene1" class="scene">
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <h2>Vacature:</h2>
+                <p>Stadsvergroener</p>
+                <h2>Beschrijving:</h2>
+                <p>
+                    Jij bent verantwoordelijk voor het vergroenen van onze stad,
+                    je gaat ervoor zorgen dat we onze doelen voor The Green Deal 2030 gaan behalen.
+                </p>
+                <button id="start-btn" onclick="changeScene(2), loadScene(3), playBackgroundMusic('happy')">
+                    <h2><Strong>- START SOLICITATIE -</Strong></h2>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene2" class="scene">
+        <div class="wrapper-center">
+            <div id="loading-cont">
+                <h2>Loading . . .</h2>
+                <div class="loading-box">
+                    <div class="loading-bar" id="loadingBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END  ----------------------------------------------------------------------------------------------------     -->
+
+
+    <!-- EGD INFO  ----------------------------------------------------------------------------------------------------     -->
+
+    <div id="scene3" class="scene">
+        <h2 class="sceneName">Scene 3</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD23"> Hallo, welkom bij het sollicitatie panel! Ik ben <span>D
+                    - 23</span>, jouw
+                gids voor deze selectieprocedure.</p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(4)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene4" class="scene">
+        <h2 class="sceneName">Scene 4</h2>
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="infoGraphic">
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD23"> Eerst even wat informatie over de European Green Deal
+                zelf, voordat je aan
+                de slag gaat.</p>
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(36)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene36" class="scene">
+        <h2 class="sceneName">Scene 36</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt" alt="gr-dl-2">
+        <img class="gr-dl-3" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt" alt="gr-dl-3">
+        <img class="gr-dl-4" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt" alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt" alt="gr-dl-5">
+        <img class="gr-dl-6" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt" alt="gr-dl-6">
+        <img class="gr-dl-7" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(37)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene37" class="scene">
+        <h2 class="sceneName">Scene 37</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" src="/assets/characters/D0.svg" class="happy-duif-txt" alt="gr-dl-3">
+        <img class="gr-dl-4" src="assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt" alt="gr-dl-4">
+        <img class="gr-dl-5" src="assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt" alt="gr-dl-5">
+        <img class="gr-dl-6" src="assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt" alt="gr-dl-6">
+        <img class="gr-dl-7" src="assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(38)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene38" class="scene">
+        <h2 class="sceneName">Scene 38</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt" alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt" alt="gr-dl-5">
+        <img class="gr-dl-6" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt" alt="gr-dl-6">
+        <img class="gr-dl-7" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(39)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene39" class="scene">
+        <h2 class="sceneName">Scene 39</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt" alt="gr-dl-5">
+        <img class="gr-dl-6" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt" alt="gr-dl-6">
+        <img class="gr-dl-7" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(40)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene40" class="scene ">
+        <h2 class="sceneName">Scene 40</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt"
+            alt="gr-dl-5">
+        <img class="gr-dl-6" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt" alt="gr-dl-6">
+        <img class="gr-dl-7" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(41)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene41" class="scene">
+        <h2 class="sceneName">Scene 41</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt"
+            alt="gr-dl-5">
+        <img class="gr-dl-6" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt"
+            alt="gr-dl-6">
+        <img class="gr-dl-7" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt" alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(42)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene42" class="scene">
+        <h2 class="sceneName">Scene 42</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-1.svg" class="happy-duif-txt"
+            alt="gr-dl-1">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-2.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-3" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-3.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-4.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-5.svg" class="happy-duif-txt"
+            alt="gr-dl-5">
+        <img class="gr-dl-6" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-6.svg" class="happy-duif-txt"
+            alt="gr-dl-6">
+        <img class="gr-dl-7" style="display: block;" src="/assets/popUp/greenDeal/gr-dl-7.svg" class="happy-duif-txt"
+            alt="gr-dl-6">
+
+        <button class="nextBtn" onclick="changeScene(5)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <!-- END  ----------------------------------------------------------------------------------------------------      -->
+
+
+    <!-- START HAPPY QUIZ  ----------------------------------------------------------------------------------------------------     -->
+
+    <div id="scene5" class="scene">
+        <h2 class="sceneName">Scene 5</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD23"> Nu we dat achter de rug hebben doen we een korte
+                persoonlijkheidstest
+                om te kijken of jij de juiste persoon bent voor deze baan.
+                Ik heb er vertrouwen in dat jij de perfecte kandidaat bent!</p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(6)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene6" class="scene">
+        <h2 class="sceneName">Scene 6</h2>
+        <h2 id="vraag"> Wat kies jij?</h2>
+        <div class="wrapper-center">
+
+            <button class="btn-icon-left" onclick="changeScene(7)"><img src="/assets/quizIcons/happy/afvalGrijs.svg"
+                    alt="afval_grijs"></button>
+            <button class="btn-icon-right" onclick="changeScene(7)"><img src="/assets/quizIcons/happy/afvalGroen.svg"
+                    alt="afval_Groen"></button>
+        </div>
+    </div>
+
+    <div id="scene7" class="scene ">
+        <h2 class="sceneName">Scene 7</h2>
+        <h2 id="vraag"> Wat kies jij?</h2>
+        <div class="wrapper-center">
+
+            <button class="btn-icon-left" onclick="changeScene(8)"><img src="/assets/quizIcons/happy/fiets.svg"
+                    alt="afval_grijs"></button>
+            <button class="btn-icon-right" onclick="changeScene(8)"><img src="/assets/quizIcons/happy/auto.svg"
+                    alt="afval_Groen"></button>
+        </div>
+    </div>
+
+    <div id="scene8" class="scene">
+        <h2 class="sceneName">Scene 8</h2>
+        <h2 id="vraag"> Wat kies jij?</h2>
+        <div class="wrapper-center">
+
+            <button class="btn-icon-left"
+                onclick="changeSceneWithGlitch('scene8','scene9'),  playBackgroundMusic('dark') , loadScene2(9)"><img
+                    src="/assets/quizIcons/happy/steak.svg" alt="afval_grijs">
+            </button>
+            <button class="btn-icon-right"
+                onclick="changeSceneWithGlitch('scene8','scene9'),  playBackgroundMusic('dark'), loadScene2(9)"><img
+                    src="/assets/quizIcons/happy/greunte.svg" alt="afvalGroen">
+            </button>
+        </div>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+
+    <!-- KAPING D-4  ----------------------------------------------------------------------------------------------------       -->
+
+    <div id="scene9" class="scene">
+        <h2 class="sceneName">Scene 9</h2>
+        <div class="wrapper-center">
+            <img class="d-4" src="/assets/characters/evil/evilDuifTxt.svg" alt="evilDuif">
+            <p class="typewriter evilTxt typewriterSoundD4">
+                ..............
+            </p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(10)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene10" class="scene">
+        <h2 class="sceneName">Scene 10</h2>
+        <div class="wrapper-center">
+            <img class="d-4" src="/assets/characters/evil/evilDuifTxt.svg" alt="evilDuif">
+            <p class="typewriter evilTxt typewriterSoundD4">
+                Dus.. Jij denkt dat het jou gaat lukken om deze stad te vergroenen? Ik geloof er niks van.
+                De test van D-23 is niet in staat om te bepalen hoe groen jij daadwerkelijk bent...
+            </p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(11)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene11" class="scene">
+        <h2 class="sceneName">Scene 11</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+
+            <button class="btn-icon-left" onclick="changeScene(12)"><img
+                    src="/assets/quizIcons/evil/afvalGrijsGrijs.svg" alt="afval_grijs"></button>
+            <button class="btn-icon-right" onclick="changeScene(70)"><img
+                    src="/assets/quizIcons/evil/afvalGroenGrijs.svg" alt="afval_Groen"></button>
+        </div>
+    </div>
+
+    <div id="scene12" class="scene">
+        <h2 class="sceneName">Scene 12</h2>
+        <div class="wrapper-center">
+            <img class="evil-info-box" src="/assets/infographic/evil/infographicAfvalGrijs1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="d-4" src="/assets/characters/evil/D-4Small.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter evilTxt typewriterSoundD4"> Maar weinig mensen scheiden hun afval op
+                de juiste manier, het lijkt me sterk dat jij
+                daar bij hoort.
+            </p>
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(43)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene43" class="scene">
+        <h2 class="sceneName">Scene 43</h2>
+        <div class="wrapper-center">
+            <img class="evil-info-box" src="/assets/infographic/evil/infographicAfvalGrijs1.svg" class="happy-duif-txt"
+                alt="infographicAfvalGrijs1">
+        </div>
+        <button class="nextBtn" onclick="changeScene(13)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene13" class="scene ">
+        <h2 class="sceneName">Scene 13</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+            <button class="btn-icon-left" onclick="changeScene(14)"><img src="/assets/quizIcons/evil/autoGrijs.svg"
+                    alt="fietsGrijs"></button>
+            <button class="btn-icon-right" onclick="changeScene(72)"><img src="/assets/quizIcons/evil/fietsGrijs.svg"
+                    alt="autoGrijs"></button>
+        </div>
+    </div>
+
+    <div id="scene14" class="scene ">
+        <h2 class="sceneName">Scene 14</h2>
+        <div class="wrapper-center">
+            <img class="evil-info-box" src="/assets/infographic/evil/infographicAuto1.svg" class="happy-duif-txt"
+                alt="ìnfographicAuto">
+            <img class="d-4" src="/assets/characters/evil/D-4Small.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter evilTxt typewriterSoundD4">
+                De CO2 uitstoot van autos is een van de grootste boosdoeners voor ons milieu.
+            </p>
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(15)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene15" class="scene">
+        <h2 class="sceneName">Scene 15</h2>
+        <div class="wrapper-center">
+            <img class="evil-info-box" src="/assets/infographic/evil/infographicAuto1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+        </div>
+        <button class="nextBtn" onclick="changeScene(44)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene44" class="scene ">
+        <h2 class="sceneName">Scene 44</h2>
+        <div class="wrapper-center">
+            <img class="evil-info-box" src="/assets/infographic/evil/infographicAuto2.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+        </div>
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene44', 'scene16'), loadScene2(16)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+    <!-- HAPPY INOGRAPHICS ----------------------------------------------------------------------------------------------------     -->
+    <div id="scene60" class="scene">
+        <h2 class="sceneName">Scene 60</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicAfvalGroen1.svg"
+                class="happy-duif-txt" alt="Happy-duif-txt">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD23"> Door afval te scheiden kun je al een groot
+                verschil maken. Goed bezig!</p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(61)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene61" class="scene">
+        <h2 class="sceneName">Scene 61</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicAfvalGroen1.svg"
+                class="happy-duif-txt" alt="Happy-duif-txt">
+        </div>
+
+        <button class="nextBtn" onclick="changeScene(62)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+
+    <div id="scene62" class="scene">
+        <h2 class="sceneName">Scene 62</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicAfvalGroen1.svg"
+                class="happy-duif-txt" alt="Happy-duif-txt">
+
+            <img class="evil-info-box" src="/assets/popUp/popUpGroenAfval1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+        </div>
+
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene62' , 'scene13'), playBackgroundMusic('dark')">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene63" class="scene">
+        <h2 class="sceneName">Scene 63</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicFiets1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD23"> Fietsen is niet alleen goed voor het millieu, maar ook voor je
+                portemonnee!
+            </p>
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(64)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene64" class="scene">
+        <h2 class="sceneName">Scene 64</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicFiets1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+        </div>
+        <button class="nextBtn" onclick="changeScene(65)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene65" class="scene">
+        <h2 class="sceneName">Scene 65</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/infographic/happy/infographicFiets1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+            <img class="evil-info-box" src="/assets/popUp/popUpFiets1.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+        </div>
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene65' , 'scene16'),  playBackgroundMusic('dark')">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+    <!-- ONDERBREKINGEN D-4 ----------------------------------------------------------------------------------------------------     -->
+    <div id="scene70" class="scene">
+        <h2 class="sceneName">Scene 70</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+
+
+            <button class="btn-icon-left"><img src="/assets/quizIcons/evil/afvalGrijsGrijs.svg"
+                    alt="afval_grijs"></button>
+            <button class="btn-icon-right"><img src="/assets/quizIcons/evil/afvalGroenGrijs.svg"
+                    alt="afval_Groen"></button>
+
+
+            <img class="d-4" src="/assets/characters/evil/evilDuifTxt.svg" alt="evilDuif">
+            <p class="typewriter evilTxt typewriterSoundD4">
+                Doe je echt aan afval scheiden? of denk je dat je het doet?
+            </p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(71)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene71" class="scene">
+        <h2 class="sceneName">Scene 71</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+
+
+            <button class="btn-icon-left" onclick="changeScene(12)"><img
+                    src="/assets/quizIcons/evil/afvalGrijsGrijs.svg" alt="afval_grijs"></button>
+            <button class="btn-icon-right"
+                onclick="changeSceneWithGlitch('scene71' , 'scene60'), playBackgroundMusic('happy'), loadScene2(60)"><img
+                    src="/assets/quizIcons/evil/afvalGroenGrijs.svg" alt="afval_Groen"></button>
+        </div>
+    </div>
+
+
+    <div id="scene72" class="scene">
+        <h2 class="sceneName">Scene 72</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+
+
+            <button class="btn-icon-left"><img src="/assets/quizIcons/evil/autoGrijs.svg" alt="afval_grijs"></button>
+            <button class="btn-icon-right"><img src="/assets/quizIcons/evil/fietsGrijs.svg" alt="afval_Groen"></button>
+
+
+            <img class="d-4" src="/assets/characters/evil/evilDuifTxt.svg" alt="evilDuif">
+            <p class="typewriter evilTxt typewriterSoundD4">
+                NIET ZO SCHEINHEILIG DOEN!!! JIJ RIJDT TOCH OOK AUTO?
+            </p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(73)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene73" class="scene">
+        <h2 class="sceneName">Scene 73</h2>
+        <h2 id="vraag"> w@t k1es jlj?</h2>
+        <div class="wrapper-center">
+
+
+            <button class="btn-icon-left" onclick="changeScene(12)"><img src="/assets/quizIcons/evil/autoGrijs.svg"
+                    alt="afval_grijs"></button>
+            <button class="btn-icon-right"
+                onclick="changeSceneWithGlitch('scene73' , 'scene63'), playBackgroundMusic('happy'), loadScene2(63)"><img
+                    src="/assets/quizIcons/evil/fietsGrijs.svg" alt="afval_Groen"></button>
+        </div>
+    </div>
+
+
+
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+
+    <!-- JUMPSCARE ----------------------------------------------------------------------------------------------------     -->
+
+    <div id="scene16" class="scene">
+        <h2 class="sceneName">Scene 16</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/characters/evil/jumpScare.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="d-23" src="/assets/characters/evil/evilTxtOnly.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter happyTxt typewriterSoundD4"> Genoeg van deze nutteloze test, tijd voor de echte
+                confrontatie!</p>
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(17)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene17" class="scene">
+        <h2 class="sceneName">Scene 17</h2>
+        <div class="wrapper-center">
+            <img class="jumpScareSmall" src="/assets/characters/evil/jumpScareSmall.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontInfographic1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(18)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene18" class="scene ">
+        <h2 class="sceneName">Scene 18</h2>
+        <div class="wrapper-center">
+            <img class="jumpScareSmall" src="/assets/characters/evil/jumpScareSmall.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontInfographic1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontPopup1.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(19)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene19" class="scene">
+        <h2 class="sceneName">Scene 19</h2>
+        <div class="wrapper-center">
+            <img class="jumpScareSmall" src="/assets/characters/evil/jumpScareSmall.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontInfographic2.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(20)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene20" class="scene">
+        <h2 class="sceneName">Scene 20</h2>
+        <div class="wrapper-center">
+            <img class="jumpScareSmall" src="/assets/characters/evil/jumpScareSmall.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontInfographic2.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="assets/infographic/evil/confrontPopup2.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(21)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene21" class="scene">
+        <h2 class="sceneName">Scene 21</h2>
+        <div class="wrapper-center">
+            <img class="jumpScareSmall" src="/assets/characters/evil/jumpScareSmall.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="evil-info-box" src="/assets/infographic/evil/confrontInfographic3.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+
+        </div>
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene21','scene22'), loadScene2(22)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <div id="scene22" class="scene">
+        <h2 class="sceneName">Scene 22</h2>
+        <div class="wrapper-center">
+            <img class="happy-info-box" src="/assets/characters/evil/jumpScare.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <img class="d-23" src="/assets/characters/evil/evilTxtOnly.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD4 happyTxt"> Ik heb dit programma overgenomen om de waarheid
+                te laten zien. Het gaat niet goedkomen. D-23 is te optimistisch geweest,
+                en daardoor gaan we de doelen nu niet behalen.</p>
+
+        </div>
+        <button class="nextBtn"
+            onclick="changeSceneWithGlitch('scene22','scene23'), playBackgroundMusic('happy'), loadScene2(23)">
+            <p>Kl!k 0m vErD3r t3 g@an1</p>
+        </button>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+
+    <!-- TESTRESULTATEN HAPPY ----------------------------------------------------------------------------------------------------      -->
+
+    <div id="scene23" class="scene">
+        <h2 class="sceneName">Scene 23</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                Zo te zien ben je klaar met het
+                invullen van de persoonlijkheidstest! Laten we de resultaten
+                bekijken!</p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(24)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene24" class="scene">
+        <h2 class="sceneName">Scene 24</h2>
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/overig/testResults1.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-2" src="/assets/popUp/overig/testResults2.svg" class="happy-duif-txt" alt="gr-dl-3">
+        <img class="gr-dl-4" src="/assets/popUp/overig/testResults3.svg" class="happy-duif-txt" alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/overig/testResults4.svg" class="happy-duif-txt" alt="gr-dl-5">
+
+
+        <button class="nextBtn" onclick="changeScene(50)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene50" class="scene">
+        <h2 class="sceneName">Scene 50</h2>
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/overig/testResults1.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/overig/testResults2.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" src="/assets/popUp/overig/testResults3.svg" class="happy-duif-txt" alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/overig/testResults4.svg" class="happy-duif-txt" alt="gr-dl-5">
+
+
+
+        <button class="nextBtn" onclick="changeScene(51)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene51" class="scene">
+        <h2 class="sceneName">Scene 51</h2>
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/overig/testResults1.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/overig/testResults2.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/overig/testResults3.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" src="/assets/popUp/overig/testResults4.svg" class="happy-duif-txt" alt="gr-dl-5">
+
+
+
+        <button class="nextBtn" onclick="changeScene(52)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene52" class="scene">
+        <h2 class="sceneName">Scene 52</h2>
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/overig/testResults1.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/overig/testResults2.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/overig/testResults3.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" style="display: block;" src="/assets/popUp/overig/testResults4.svg" class="happy-duif-txt"
+            alt="gr-dl-5">
+
+
+
+        <button class="nextBtn" onclick="changeScene(25)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene25" class="scene">
+        <h2 class="sceneName">Scene 25</h2>
+
+        <img class="gr-dl-1" style="display: block;" src="/assets/popUp/overig/testResults1.svg" class="happy-duif-txt"
+            alt="gr-dl-2">
+        <img class="gr-dl-2" style="display: block;" src="/assets/popUp/overig/testResults2.svg" class="happy-duif-txt"
+            alt="gr-dl-3">
+        <img class="gr-dl-4" style="display: block;" src="/assets/popUp/overig/testResults3.svg" class="happy-duif-txt"
+            alt="gr-dl-4">
+        <img class="gr-dl-5" style="display: block;" src="/assets/popUp/overig/testResults4.svg" class="happy-duif-txt"
+            alt="gr-dl-5">
+
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/happyDuifTxt.svg" class="happy-duif-txt"
+                alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                Oei, Het lijkt erop dat er iets mis is gegaan. Achja,
+                het zal vast wel goedkomen. Ik heb er vertrouwen in dat jij de geschikte
+                persoon bent voor deze baan!</p>
+        </div>
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene25', 'scene26'), loadScene2(26), playBackgroundMusic('confront')">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+    <!-- ONTMOETING D-4 & D23 ----------------------------------------------------------------------------------------------------      -->
+
+    <div id="scene26" class="scene">
+        <h2 class="sceneName">Scene 26</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt"> ...........</p>
+
+            <img class="d-4" src="/assets/characters/evil/evilDuifTxt.svg" alt="evilDuif">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                Nu ben ik er klaar mee! Dit soort gedrag is precies de reden waarom we onze doelen niet gaan halen!
+            </p>
+        </div>
+        <button class="nextBtn" onclick="changeScene(27)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene27" class="scene">
+        <h2 class="sceneName">Scene 27</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                Wie ben jij, wat gebeurt er?
+            </p>
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuif">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                . . .
+            </p>
+
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(29)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene29" class="scene">
+        <h2 class="sceneName">Scene 29</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                ...
+            </p>
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuif">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                Ik had ooit jouw functie,
+                maar ik was te kritisch voor ze.
+                Ze wilden veel bereiken maar waren niet bereid hun leven
+                aan te passen. Nu is het te laat.
+                Ik neem het systeem over, het is de enige optie.
+            </p>
+
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(30)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene30" class="scene">
+        <h2 class="sceneName">Scene 30</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                Nee! Ik ben niet voor niks zo geprogrammeerd.
+                Mensen willen zich niet aanpassen.
+                Ze willen het gevoel
+                hebben dat ze het goed doen!
+            </p>
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuif">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                ...
+            </p>
+
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(31)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene31" class="scene">
+        <h2 class="sceneName">Scene 31</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                ...
+            </p>
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuif">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                Vaarwel D-23, Je optimisme en laksheid hebben al veel te lang onze plannen verhinderd.
+            </p>
+
+
+
+        </div>
+        <button class="nextBtn" onclick="changeScene(100)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+    <!-- SYNNERGY ----------------------------------------------------------------------------------------------------      -->
+
+    <div id="scene100" class="scene">
+        <h2 class="sceneName">Scene 100</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                ...
+            </p>
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuifTxt">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                Tijd om de wereld te laten zien dat we het beter kunnen. Strikte regels en felle straffen gaan ons
+                helpen.
+            </p>
+        </div>
+        <img id="virusOn" class="melding" src="assets/popUp/overig/virusOn.svg" alt="virusOn">
+        <img id="virusOff" class="melding off" src="assets/popUp/overig/virusOff.svg" alt="virusOff">
+
+
+
+        <button class="nextBtn" onclick="changeScene(101)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene101" class="scene">
+        <h2 class="sceneName">Scene 101</h2>
+        <div class="wrapper-center">
+            <img class="d-23" src="/assets/characters/happy/d-23Big.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+            <p class="typewriter typewriterSoundD23 happyTxt">
+                Nee! Ik wil niet samen gaan met jouw negativiteit!
+            </p>
+
+
+            <img class="d-4" src="/assets/characters/evil/d-4Big.svg" alt="evilDuifTxt">
+            <p class="typewriter typewriterSoundD4 evilTxt">
+                WAT IS DIT!?!?!? DIT ZOU NIET MOETEN GEBEUREN!!!
+            </p>
+        </div>
+        <img id="synergyOn" class="melding" src="assets/popUp/overig/synergyOn.svg" alt="syn">
+        <img id="synergyOff" class="melding off" src="assets/popUp/overig/synergyOff.svg" alt="syn">
+
+
+
+        <button class="nextBtn" onclick="changeSceneWithGlitch('scene101', 'scene102'), playBackgroundMusic('restart'), loadScene3(103)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene102" class="scene">
+        <h2 class="sceneName">Scene 102</h2>
+
+        <img class="gif" src="/assets/gif/restart.gif" alt="restarting">
+
+    </div>
+
+
+    <div id="scene103" class="scene">
+        <h2 class="sceneName">Scene 103</h2>
+
+        <img class="d-0" src="/assets/characters/D0.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+        <p class="typewriter typewriterSoundD0 d-0-txt">
+            Al dat gekibbel gaat ons niet helpen. Een gebalanceerde aanpak is wat we nodig hebben.
+        </p>
+
+        <button class="nextBtn" onclick="changeScene(104)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene104" class="scene">
+        <h2 class="sceneName">Scene 104</h2>
+
+        <img class="d-0" src="/assets/characters/D0.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+        <p class="typewriter typewriterSoundD0 d-0-txt">
+            Als stadsvergroener hebben
+            wij iemand nodig die een gebalanceerde aanpak heeft.
+            Ik hoop dat jij dit bent. </p>
+
+        <button class="nextBtn" onclick="changeScene(105)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene105" class="scene">
+        <h2 class="sceneName">Scene 105</h2>
+
+        <img class="d-0" src="/assets/characters/D0.svg" class="happy-duif-txt" alt="Happy-duif-txt">
+        <p class="typewriter typewriterSoundD0 d-0-txt">
+            Met onze gecombineerde
+            eigenschappen kunnen we aan de slag gaan met het bereiken van onze doelen. </p>
+
+        <button class="nextBtn" onclick="changeScene(106)">
+            <p>Klik om verder te gaan!</p>
+        </button>
+    </div>
+
+    <div id="scene106" class="scene">
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <button class="knopje" onclick="changeScene(107),playBackgroundMusic('holy')">
+                    <img src="/assets/knop.svg" alt="Knopje">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="scene107" class="scene">
+        <div class="wrapper-center">
+            <div class="tekst-cont-start">
+                <h2>Bedankt!</h2>
+                <p>
+                    Wouter Lipsch
+                    <br>
+                    Jules Lamkin
+                    <br>
+                    Meike Spapens
+                    <br>
+                    Iris Kuipers
+                </p>
+                <button id="start-btn" onclick="changeScene(32),playBackgroundMusic()">
+                    <h2><Strong>- START OPNIEUW -</Strong></h2>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- END ----------------------------------------------------------------------------------------------------       -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

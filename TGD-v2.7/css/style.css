@@ -1,0 +1,577 @@
+/* COLORS FOR WHOLE PROJECT */
+:root {
+    --white-bg: #EEEBE1;
+    --beige: #FFF8C8;
+    --pink-bg: #BF6AB7;
+    --black-bg: #000000;
+    --green-bg: #64D651;
+    --r-bg-pink: radial-gradient(50% 50% at 50% 50%, #BF6AB7 0%, #EEEBE1 100%);
+    --r-bg-black: radial-gradient(50% 50% at 50% 50%, #000 0%, #EEEBE1 100%);
+    --r-bg-p-and-b: radial-gradient(50% 50% at 50% 50%, #BF6AB7 19.03%, #000 37.23%, #EEEBE1 100%);
+}
+
+/* TEXT STYLES TEMPORARY (Ik wil hier nog variables van maken)
+
+    BOLD
+    font-family: "lores-15", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    BOLD OAKLAND
+    font-family: "lores-15-bold-alt-oakland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    NARROW REGULAR
+    font-family: "lores-15-narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+
+*/
+
+body {
+    background-color: var(--white-bg);
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: "lores-15", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 2em;
+    font-family: "lores-15-narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2em;
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+p span {
+    font-weight: 700;
+}
+
+.scene {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background: var(--r-bg-pink);
+}
+
+.active {
+    display: block;
+}
+
+.wrapper-center {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+body button {
+    background: transparent;
+    border: none;
+}
+
+body button:hover {
+    opacity: 0.5;
+}
+
+.nextBtn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--black-bg);
+    text-align: center;
+    text-decoration: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+}
+
+.nextBtn p {
+    font-size: 35px;
+    font-family: "lores-15", sans-serif;
+    font-weight: 700;
+    bottom: 0%;
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
+    margin-bottom: 0em;
+    z-index: 99;
+}
+
+.nextBtn:hover {
+    opacity: 1;
+}
+
+.wrapper-center .d-4 {
+    top: 50%;
+    left: 25%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-center .d-23 {
+    top: 50%;
+    left: 69%;
+    position: absolute;
+    transform: translate(-50%, -59%);
+}
+
+.sceneName{
+    display: none;
+}
+
+.gif{
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    
+}
+
+.wrapper-center .happy-info-box {
+    left: 35%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-center .jumpScareSmall {
+    left: 20%;
+    position: absolute;
+    bottom: -850px;
+    transform: translate(-50%, -50%);
+}
+
+
+.wrapper-center .evil-info-box {
+    left: 70%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SCENE 1 */
+
+#scene1 {
+    background-color: var(--white-bg);
+}
+
+.tekst-cont-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    /* gap: 2em; */
+}
+
+
+.tekst-cont-start h2 {
+    /* font-size: 66px; */
+    font-family: LoRes 15 OT;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 30px;
+    color: #000000;
+
+    strong {
+        font-weight: 700;
+    }
+}
+
+#start-btn {
+    display: inline-block;
+    bottom: 0px;
+    right: auto;
+    top: 400px;
+}
+
+.tekst-cont-start h2 {
+    align-items: center;
+}
+
+.tekst-cont-start p {
+    text-align: center;
+}
+
+/* END */
+
+/* SCENE 2 */
+#scene2 {
+    background-color: var(--white-bg);
+}
+
+#loading-cont {
+    flex-direction: column;
+}
+
+.loading-box {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 300px;
+    /* Breedte van het laadscherm, aanpassen naar wens */
+    height: 20px;
+    /* Hoogte van het laadscherm, aanpassen naar wens */
+    border: 2px solid var(--black-bg);
+    /* Randkleur, aanpassen naar wens */
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    /* Vulkleur, aanpassen naar wens */
+    /* Hier moeten we even kieke hoe we de balk van links naar rechts krijgen */
+    animation: fill 1.5s linear forwards;
+}
+
+@keyframes fill {
+    to {
+        width: 100%;
+    }
+}
+
+/* END */
+
+/* SCENE 3 */
+#scene3 {
+    background: var(--r-bg-pink);
+}
+
+#scene3 .happy-duif-txt {
+    right: 0px;
+
+}
+
+/* SCENE 4 */
+
+#scene4 {
+    background: var(--r-bg-pink);
+}
+
+/* END */
+
+/* SCENE 6 & 7 & 8 */
+
+#vraag {
+    margin-bottom: 0em;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.btn-icon-left img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.btn-icon-right img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+.btn-icon-left {
+    padding: 0px;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+}
+
+.btn-icon-right {
+    padding: 0px;
+    left: 75%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+}
+
+/* END */
+
+
+/* Green deal sjwik */
+
+.gr-dl-1 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 15%;
+    top: 15%;
+    display: none;
+}
+
+.gr-dl-2 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 20%;
+    top: 20%;
+    display: none;
+}
+
+.gr-dl-3 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 25%;
+    top: 25%;
+    display: none;
+}
+
+.gr-dl-4 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 30%;
+    top: 30%;
+    display: none;
+}
+
+.gr-dl-5 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 35%;
+    top: 35%;
+    display: none;
+}
+
+.gr-dl-6 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 40%;
+    top: 40%;
+    display: none;
+}
+
+.gr-dl-7 {
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    left: 45%;
+    top: 45%;
+    display: none;
+}
+
+
+
+/* Evil Scene Backgrounds*/
+#scene9,
+#scene10,
+#scene11,
+#scene12,
+#scene13,
+#scene14,
+#scene15,
+#scene16,
+#scene17,
+#scene18,
+#scene19,
+#scene20,
+#scene21,
+#scene22,
+#scene43,
+#scene44,
+#scene45,
+#scene70,
+#scene71,
+#scene72,
+#scene73,
+#scene74
+ {
+    background: var(--r-bg-black);
+}
+
+
+/* COMBINED PINK AND BLACK BACKGROUNDS */
+
+#scene26,
+#scene27,
+#scene28,
+#scene29,
+#scene30,
+#scene31,
+#scene100,
+#scene101
+ {
+    background: var(--r-bg-p-and-b);
+}
+
+/* NO BACKGROUND */
+#scene32,
+#scene33,
+#scene34,
+#scene35,
+#scene102,
+#scene200,
+#scene1,
+#scene2 {
+    background: none;
+}
+
+/* GREEN BACKGROUND */
+#scene103,
+#scene104,
+#scene105,
+#scene106,
+#scene107{
+    background: radial-gradient(50% 50% at 50% 50%, #64D651 0%, #EEEBE1 100%);
+}
+
+/* END */
+
+/* EVIL TEXT BOX + wrapper */
+
+.wrapper-center .evilTxt {
+    position: absolute;
+    left: 12%;
+    top: 35px;
+    width: 627px;
+    height: 195px;
+}
+
+/* END */
+
+/* EVIL TEXT BOX */
+
+.wrapper-center .happyTxt {
+    position: absolute;
+    left: 52%;
+    top: 37px;
+    width: 627px;
+    height: 195px;
+}
+
+/* END */
+
+/* SCENE 100 */
+
+.melding {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+/* AAN EN UIT SJWIK ---------------------------------------------------------------------------------------------------------------------------------*/
+
+.off {
+    display: none;
+}
+
+/* END  ---------------------------------------------------------------------------------------------------------------------------------*/
+
+/* GROEN DING TXT BOX */
+.d-0{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.d-0-txt{
+    position: absolute;
+    left: 31%;
+    top: 60%;
+    width: 650px;
+}
+
+/* Of class */
+
+.of{
+    position: absolute;
+}
+
+/* GLITCH FINAL --------------------------------------------------------------------------------------------------------------------------------- */
+
+@keyframes glitch {
+    0% {
+        clip-path: inset(0 0 0 0);
+        transform: skew(0deg);
+
+        background: var(--r-bg-pink);
+    }
+
+    10% {
+        clip-path: inset(-200% 20% 200% -20%);
+        transform: skew(50deg);
+
+        background: var(--r-bg-black);
+    }
+
+    20% {
+        clip-path: inset(200% 20% -200% -20%);
+        transform: skew(-50deg);
+
+        background: var(--r-bg-pink);
+    }
+
+    30% {
+        clip-path: inset(-200% 20% 200% -20%);
+        transform: skew(50deg);
+
+        background: var(--r-bg-black);
+    }
+
+    40%,
+    100% {
+        clip-path: inset(0 0 0 0);
+        transform: skew(0deg);
+
+        background: var(--r-bg-black);
+    }
+}
+
+.glitch {
+    animation: glitch 0.5s linear infinite;
+}
+
+/* END ---------------------------------------------------------------------------------------------------------------------------------*/
+*/
+/* TYPEWRITER FINAL ---------------------------------------------------------------------------------------------------------------------------------*/
+
+.typewriter {
+    white-space: pre-wrap;
+    /* Preserves spaces and line breaks */
+}
+
+/* END ---------------------------------------------------------------------------------------------------------------------------------*/
+
+
+#resolutionWarning,#resolutionWarning h2{
+    background-size: contain;
+    height: 76px;
+    width: 338px;
+    color: var(--green-bg);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: 98;
+    font-size: 20px;
+    text-align: center;
+    margin: 0   auto;
+}
